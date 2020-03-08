@@ -1,1 +1,16 @@
-site_name: My Docs
+site_name: python之django学习笔记
+site_author: 'setcreed'
+repo_name: 'django-dev'
+repo_url: 'https://github.com/setcreed/django-dev'
+
+theme: readthedocs
+
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+  - mdx_math:
+      enable_dollar_delimiter: True  #for use of inline $..$
+
+copyright: 'Copyright &copy; 2019 - 2020 setcreed'
