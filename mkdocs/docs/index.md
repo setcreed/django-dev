@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# django
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

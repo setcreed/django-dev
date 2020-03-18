@@ -3,14 +3,37 @@ site_author: 'setcreed'
 repo_name: 'django-dev'
 repo_url: 'https://github.com/setcreed/django-dev'
 
-theme: readthedocs
+# theme: readthedocs
+
+# Configuration, https://squidfunk.github.io/mkdocs-material/
+theme:
+  name: 'material'
+  palette:
+    primary: 'black'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
 
 
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
+extra:
+  # disqus: 'setcreed'
+  social:
+    - type: 'github'
+      link: 'https://github.com/setcreed'
+
 markdown_extensions:
+  - admonition
   - mdx_math:
-      enable_dollar_delimiter: True  #for use of inline $..$
+      enable_dollar_delimiter: true  #for use of inline $..$
+  - codehilite: # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
+      linenums: true
+      guess_lang: true
+  - toc:
+      permalink: true
+  - pymdownx.superfences
 
 copyright: 'Copyright &copy; 2019 - 2020 setcreed'
