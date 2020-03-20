@@ -1,39 +1,99 @@
-site_name: python之django学习笔记
-site_author: 'setcreed'
-repo_name: 'django-dev'
+site_name: django学习笔记
+site_author: setcreed
+site_description: 希言自然。
 repo_url: 'https://github.com/setcreed/django-dev'
 
-# theme: readthedocs
-
-# Configuration, https://squidfunk.github.io/mkdocs-material/
 theme:
   name: 'material'
+  language: 'zh'
+  feature:
+    tabs: true
   palette:
-    primary: 'black'
-    accent: 'indigo'
-  font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    primary: red
+    accent: red
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: "#"
+  # pymdown-extensions
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: none
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      # css_class: codehilite # https://github.com/facelessuser/pymdown-extensions/blob/master/mkdocs.yml
+      
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
-
+extra_css:
+  - static/css/extra.css?v=1
+  - static/plugins/gitalk/gitalk.css?v=1
 extra_javascript:
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - static/plugins/md5.min.js
+  - static/plugins/gitalk/gitalk.min.js
+  - static/plugins/gitalk/gitalk-render.js
+copyright: 'Copyright &copy; 2019 - 2020 setcreed'
 
 extra:
-  # disqus: 'setcreed'
   social:
     - type: 'github'
       link: 'https://github.com/setcreed'
+  # disqus: 'flc-docs' # 需翻墙
 
-markdown_extensions:
-  - admonition
-  - mdx_math:
-      enable_dollar_delimiter: true  #for use of inline $..$
-  - codehilite: # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
-      linenums: true
-      guess_lang: true
-  - toc:
-      permalink: true
-  - pymdownx.superfences
+plugins:
+  - search
+  - minify:
+      minify_html: true
 
-copyright: 'Copyright &copy; 2019 - 2020 setcreed'
+nav:
+- 简介: 'index.md'
+- django基本操作:
+    - '01 django前奏': 'django基本操作/01 django前奏.md'
+    - '02 django基础三板斧': 'django基本操作/02 django基础三板斧.md'
+    - '03 django静态文件': 'django基本操作/03 django静态文件.md'
+    - '04 django连接MySQL操作模型表': 'django基本操作/04 django连接MySQL操作模型表.md'
+    - '05 MTV与MVC模型': 'django基本操作/05 MTV与MVC模型.md'
+    - '06 django之路由层': 'django基本操作/06 django之路由层.md'
+    - '07 django之视图层': 'django基本操作/07 django之视图层.md'
+    - '08 django之模板层': 'django基本操作/08 django之模板层.md'
+    - '09 django之模型层': 'django基本操作/09 django之模型层.md'
+    - '10 django之ORM字段及参数': 'django基本操作/10 django之ORM字段及参数.md'
+    - '11 django之查询操作': 'django基本操作/11 django之查询操作.md'
+    - '12 django之ORM优化查询': 'django基本操作/12 django之ORM优化查询.md' 
+    - '13 django和ajax': 'django基本操作/13 django和ajax.md'
+    - '14 批量插入数据、自定义分液器': 'django基本操作/14 批量插入数据、自定义分液器.md'
+    - '15 多对多关系表的三种创建方式': 'django基本操作/15 多对多关系表的三种创建方式.md'
+    - '16 django之forms组件': 'django基本操作/16 django之forms组件.md'
+    - '17 django之cookies和session组件': 'django基本操作/17 django之cookies和session组件.md'
+    - '18 django之中间件': 'django基本操作/18 django之中间件.md'
+    - '19 基于中间件的编程思想': 'django基本操作/19 基于中间件的编程思想.md'
+    - '20 django之csrf跨站请求': 'django基本操作/20 django之csrf跨站请求.md'
+    - '21 django之auth模块': 'django基本操作/21 django之auth模块.md'
+    - '22 django1.x和2.x的区别': 'django基本操作/22 django1.x和2.x的区别.md'
+- django rest framework: 
+    - '01 Restful规范': 'django rest framework/01 Restful规范.md'
+    - '02 drf框架之APIView的请求生命周期': 'django rest framework/02 drf框架之APIView的请求生命周期.md'
+    - '03 drf序列化家族': 'django rest framework/03 drf序列化家族.md'
+    - '04 表关系': 'django rest framework/04 表关系.md'
+    - '05 drf序列化组件实现十大接口': 'django rest framework/05 drf序列化组件实现十大接口.md'
+    - '06 视图家族': 'django rest framework/06 视图家族.md'
+    - '07 jwt认证': 'django rest framework/07 jwt认证.md'
+    - '08 三大认证、多方式登录': 'django rest framework/08 三大认证、多方式登录.md'
+    - '09 三大组件源码分析': 'django rest framework/09 三大组件源码分析.md'

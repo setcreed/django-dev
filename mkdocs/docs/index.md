@@ -1,17 +1,23 @@
-# django
+# Django学习工具
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+```python
+'''
+ ____  _                          __        __   _     
+|  _ \(_) __ _ _ __   __ _  ___   \ \      / /__| |__  
+| | | | |/ _` | '_ \ / _` |/ _ \   \ \ /\ / / _ \ '_ \ 
+| |_| | | (_| | | | | (_| | (_) |   \ V  V /  __/ |_) |
+|____// |\__,_|_| |_|\__, |\___/     \_/\_/ \___|_.__/ 
+    |__/             |___/                             
 
-## Commands
+'''
+```
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Python下有许多款不同的 Web 框架。Django是重量级选手中最有代表性的一位。许多成功的网站和APP都基于Django。
+
+Django是一个开放源代码的Web应用框架，由Python写成。
+
+Django遵守BSD版权，初次发布于2005年7月, 并于2008年9月发布了第一个正式版本1.0 。
+
+Django采用了MVT的软件设计模式。
