@@ -3,42 +3,44 @@
 
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="希言自然。">
+      
       
       
         <meta name="author" content="setcreed">
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+        <meta name="lang:clipboard.copy" content="复制">
       
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+        <meta name="lang:clipboard.copied" content="已复制">
       
-        <meta name="lang:search.language" content="en">
+        <meta name="lang:search.language" content="ja">
       
         <meta name="lang:search.pipeline.stopwords" content="True">
       
         <meta name="lang:search.pipeline.trimmer" content="True">
       
-        <meta name="lang:search.result.none" content="No matching documents">
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
       
-        <meta name="lang:search.result.one" content="1 matching document">
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
       
-        <meta name="lang:search.result.other" content="# matching documents">
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
       
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="/assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>python之django学习笔记</title>
+        <title>django学习笔记</title>
       
     
     
@@ -49,7 +51,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#ef5350">
       
     
     
@@ -65,6 +67,10 @@
     <link rel="stylesheet" href="/assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="/static/css/extra.css?v=1">
+    
+      <link rel="stylesheet" href="/static/plugins/gitalk/gitalk.css?v=1">
+    
     
       
     
@@ -73,7 +79,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
   
     <svg class="md-svg">
       <defs>
@@ -92,7 +98,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="python之django学习笔记" aria-label="python之django学习笔记" class="md-header-nav__button md-logo">
+        <a href="/." title="django学习笔记" aria-label="django学习笔记" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -105,7 +111,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              python之django学习笔记
+              django学习笔记
             </span>
             <span class="md-header-nav__topic">
               
@@ -123,7 +129,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -133,7 +139,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
           <div class="md-search-result__meta">
-            Type to start searching
+            键入以开始搜索
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -151,7 +157,7 @@
 
   
 
-<a href="https://github.com/setcreed/django-dev/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/setcreed/django-dev/" title="前往 Github 仓库" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -160,7 +166,7 @@
     </div>
   
   <div class="md-source__repository">
-    django-dev
+    GitHub
   </div>
 </a>
           </div>
@@ -175,6 +181,52 @@
         
       
       
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="/." class="md-tabs__link md-tabs__link--active">
+        简介
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/01%20django%E5%89%8D%E5%A5%8F/" class="md-tabs__link">
+          django基本操作
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="/django%20rest%20framework/01%20Restful%E8%A7%84%E8%8C%83/" class="md-tabs__link">
+          django rest framework
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -184,12 +236,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="python之django学习笔记" class="md-nav__button md-logo">
+    <a href="/." title="django学习笔记" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    python之django学习笔记
+    django学习笔记
   </label>
   
     <div class="md-nav__source">
@@ -198,7 +250,7 @@
 
   
 
-<a href="https://github.com/setcreed/django-dev/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/setcreed/django-dev/" title="前往 Github 仓库" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -207,7 +259,7 @@
     </div>
   
   <div class="md-source__repository">
-    django-dev
+    GitHub
   </div>
 </a>
     </div>
@@ -220,9 +272,429 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="django" class="md-nav__link">
-      django
+    <a href="/." title="简介" class="md-nav__link">
+      简介
     </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      django基本操作
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        django基本操作
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/01%20django%E5%89%8D%E5%A5%8F/" title="01 django前奏" class="md-nav__link">
+      01 django前奏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/02%20django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="02 django基础三板斧" class="md-nav__link">
+      02 django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/03%20django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="03 django静态文件" class="md-nav__link">
+      03 django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/04%20django%E8%BF%9E%E6%8E%A5MySQL%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%9E%8B%E8%A1%A8/" title="04 django连接MySQL操作模型表" class="md-nav__link">
+      04 django连接MySQL操作模型表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/05%20MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="05 MTV与MVC模型" class="md-nav__link">
+      05 MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/06%20django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="06 django之路由层" class="md-nav__link">
+      06 django之路由层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/07%20django%E4%B9%8B%E8%A7%86%E5%9B%BE%E5%B1%82/" title="07 django之视图层" class="md-nav__link">
+      07 django之视图层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/08%20django%E4%B9%8B%E6%A8%A1%E6%9D%BF%E5%B1%82/" title="08 django之模板层" class="md-nav__link">
+      08 django之模板层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/09%20django%E4%B9%8B%E6%A8%A1%E5%9E%8B%E5%B1%82/" title="09 django之模型层" class="md-nav__link">
+      09 django之模型层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/10%20django%E4%B9%8BORM%E5%AD%97%E6%AE%B5%E5%8F%8A%E5%8F%82%E6%95%B0/" title="10 django之ORM字段及参数" class="md-nav__link">
+      10 django之ORM字段及参数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/11%20django%E4%B9%8B%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C/" title="11 django之查询操作" class="md-nav__link">
+      11 django之查询操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/12%20django%E4%B9%8BORM%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/" title="12 django之ORM优化查询" class="md-nav__link">
+      12 django之ORM优化查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/13%20django%E5%92%8Cajax/" title="13 django和ajax" class="md-nav__link">
+      13 django和ajax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django基本操作/13 批量插入数据、自定义分液器.md" title="14 批量插入数据、自定义分液器" class="md-nav__link">
+      14 批量插入数据、自定义分液器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/15%20%E5%A4%9A%E5%AF%B9%E5%A4%9A%E5%85%B3%E7%B3%BB%E8%A1%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/" title="15 多对多关系表的三种创建方式" class="md-nav__link">
+      15 多对多关系表的三种创建方式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/16%20django%E4%B9%8Bforms%E7%BB%84%E4%BB%B6/" title="16 django之forms组件" class="md-nav__link">
+      16 django之forms组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/17%20django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="17 django之cookies和session组件" class="md-nav__link">
+      17 django之cookies和session组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/18%20django%E4%B9%8B%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="18 django之中间件" class="md-nav__link">
+      18 django之中间件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/19%20%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/" title="19 基于中间件的编程思想" class="md-nav__link">
+      19 基于中间件的编程思想
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/20%20django%E4%B9%8Bcsrf%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82/" title="20 django之csrf跨站请求" class="md-nav__link">
+      20 django之csrf跨站请求
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/21%20django%E4%B9%8Bauth%E6%A8%A1%E5%9D%97/" title="21 django之auth模块" class="md-nav__link">
+      21 django之auth模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/22%20django1.x%E5%92%8C2.x%E7%9A%84%E5%8C%BA%E5%88%AB/" title="22 django1.x和2.x的区别" class="md-nav__link">
+      22 django1.x和2.x的区别
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      django rest framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        django rest framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/01%20Restful%E8%A7%84%E8%8C%83/" title="01 Restful规范" class="md-nav__link">
+      01 Restful规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/02%20drf%E6%A1%86%E6%9E%B6%E4%B9%8BAPIView%E7%9A%84%E8%AF%B7%E6%B1%82%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="02 drf框架之APIView的请求生命周期" class="md-nav__link">
+      02 drf框架之APIView的请求生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/03%20drf%E5%BA%8F%E5%88%97%E5%8C%96%E5%AE%B6%E6%97%8F/" title="03 drf序列化家族" class="md-nav__link">
+      03 drf序列化家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/04%20%E8%A1%A8%E5%85%B3%E7%B3%BB/" title="04 表关系" class="md-nav__link">
+      04 表关系
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/05%20drf%E5%BA%8F%E5%88%97%E5%8C%96%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8D%81%E5%A4%A7%E6%8E%A5%E5%8F%A3/" title="05 drf序列化组件实现十大接口" class="md-nav__link">
+      05 drf序列化组件实现十大接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/06%20%E8%A7%86%E5%9B%BE%E5%AE%B6%E6%97%8F/" title="06 视图家族" class="md-nav__link">
+      06 视图家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/07%20jwt%E8%AE%A4%E8%AF%81/" title="07 jwt认证" class="md-nav__link">
+      07 jwt认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/08%20%E4%B8%89%E5%A4%A7%E8%AE%A4%E8%AF%81%E3%80%81%E5%A4%9A%E6%96%B9%E5%BC%8F%E7%99%BB%E5%BD%95/" title="08 三大认证、多方式登录" class="md-nav__link">
+      08 三大认证、多方式登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/django%20rest%20framework/09%20%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" title="09 三大组件源码分析" class="md-nav__link">
+      09 三大组件源码分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -282,9 +754,30 @@
     
       <script src="/assets/javascripts/application.c33a9706.js"></script>
       
+        
+        
+          
+          <script src="/assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="/assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="/assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
       <script>app.initialize({version:"1.1",url:{base:"/"}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="/static/plugins/md5.min.js"></script>
+      
+        <script src="/static/plugins/gitalk/gitalk.min.js"></script>
+      
+        <script src="/static/plugins/gitalk/gitalk-render.js"></script>
       
     
   </body>
