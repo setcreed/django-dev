@@ -87,6 +87,7 @@ nav:
     - '20 django之csrf跨站请求': 'django基本操作/20 django之csrf跨站请求.md'
     - '21 django之auth模块': 'django基本操作/21 django之auth模块.md'
     - '22 django1.x和2.x的区别': 'django基本操作/22 django1.x和2.x的区别.md'
+    - '23 django实现读写分离': 'django基本操作/23 django实现读写分离.md'
 - django rest framework: 
     - '01 Restful规范': 'django rest framework/01 Restful规范.md'
     - '02 drf框架之APIView的请求生命周期': 'django rest framework/02 drf框架之APIView的请求生命周期.md'
